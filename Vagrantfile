@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     config.vm.synced_folder ".", "/vagrant"
   end 
   config.vm.define "ubunu-pptp-desktop" do |d|
-    d.vm.box = "ubuntu/trusty64"
+    d.vm.box = "bento/ubuntu-16.04"
     d.vm.hostname = "ubunu-pptp-desktop"
     d.vm.network "public_network", bridge: "eno4", ip: "192.168.57.18", auto_config: "false", netmask: "255.255.255.0" , gateway: "192.168.57.1"
     default_router = "192.168.57.1"
